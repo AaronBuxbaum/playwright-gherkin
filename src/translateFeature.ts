@@ -1,8 +1,9 @@
 import type { Pickle, GherkinDocument } from "@cucumber/messages";
 import { GherkinStreams } from "@cucumber/gherkin-streams";
+import type { TestStep } from "@playwright/test/reporter";
 
 export type GherkinData = Record<string, Feature>;
-export type Scenario = Pickle;
+export type Scenario = Pickle & { matchers: TestStep[] };
 export type Document = GherkinDocument;
 
 export interface Feature {

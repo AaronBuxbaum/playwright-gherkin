@@ -6,7 +6,11 @@ import {
   TestResult,
 } from "@playwright/test/reporter";
 import * as fs from "fs";
-import translateFeature, { Feature, GherkinData } from "./translateFeature";
+import translateFeature, {
+  Feature,
+  Scenario,
+  GherkinData,
+} from "./translateFeature";
 
 class GherkinReporter implements Reporter {
   features: GherkinData = {};
@@ -16,30 +20,48 @@ class GherkinReporter implements Reporter {
     this.features = await translateFeature(files);
   }
 
-  async onTestEnd(test: TestCase, result: TestResult) {
+  onTestEnd(test: TestCase, result: TestResult) {
     const feature = this.getFeature(test);
     if (!feature) return;
     const scenario = this.getScenario(test, feature);
     if (scenario.tags.some((tag) => tag.name === "skip")) return;
 
-    const steps = result.steps.filter((step) => step.category === "test.step");
+    const matchers = result.steps.filter(
+      (step) => step.category === "test.step"
+    );
+    scenario.matchers = matchers;
+  }
+
+  onEnd() {
+    Object.values(this.features).forEach((feature) => {
+      this.checkFeature(feature);
+    });
+  }
+
+  checkFeature(feature: Feature) {
+    feature.scenarios.forEach((scenario) => {
+      this.checkScenario(scenario);
+    });
+  }
+
+  checkScenario({ matchers, steps, uri }: Scenario) {
+    if (!steps || !matchers) return;
+
     this.assert(
       steps.length,
-      scenario.steps.length,
+      matchers.length,
       `Not all feature steps have their equivalent matcher!`,
-      feature
+      uri
     );
 
     for (let i = 0; i < steps.length; i++) {
       this.assert(
-        scenario.steps[i].text,
-        this.handleStepTitle(steps[i].title),
+        steps[i].text,
+        this.handleStepTitle(matchers[i].title),
         `Step ${i} does not match!`,
-        feature
+        uri
       );
     }
-
-    return Promise.resolve();
   }
 
   handleTestFilename(filename: string) {
@@ -79,7 +101,7 @@ class GherkinReporter implements Reporter {
       feature.document.feature?.name,
       test.parent.title,
       `Feature title does not match!`,
-      feature
+      feature.document.uri
     );
     return feature;
   }
@@ -103,15 +125,15 @@ class GherkinReporter implements Reporter {
       test.title,
       scenario.name,
       `Scenario title does not match!`,
-      feature
+      feature.document.uri
     );
     return scenario;
   }
 
-  assert<T>(expected: T, actual: T, explanation: string, feature: Feature) {
+  assert<T>(expected: T, actual: T, explanation: string, path?: string) {
     if (expected !== actual) {
       throw new Error(
-        `${explanation}\nExpected "${expected}" but got "${actual}".\nFailed on ${feature.document.uri}`
+        `${explanation}\nExpected "${expected}" but got "${actual}".\nFailed on ${path}`
       );
     }
   }
