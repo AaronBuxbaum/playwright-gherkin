@@ -3,7 +3,7 @@
   "sideEffects": false,
   "type": "module",
   "main": "./dist/index.js",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Aaron Buxbaum (me@aaronbuxbaum.com)",
   "description": "Playwright reporter for BDD",
   "scripts": {

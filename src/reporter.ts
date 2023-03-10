@@ -16,7 +16,7 @@ class GherkinReporter implements Reporter {
     this.features = await translateFeature(files);
   }
 
-  onTestEnd(test: TestCase, result: TestResult) {
+  async onTestEnd(test: TestCase, result: TestResult) {
     const feature = this.getFeature(test);
     if (!feature) return;
     const scenario = this.getScenario(test, feature);
@@ -38,6 +38,8 @@ class GherkinReporter implements Reporter {
         feature
       );
     }
+
+    return Promise.resolve();
   }
 
   handleTestFilename(filename: string) {
