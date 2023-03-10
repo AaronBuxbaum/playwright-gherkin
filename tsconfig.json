@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "esModuleInterop": true,
     "strict": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
     "noEmit": true,
-    "incremental": true
+    "incremental": true,
+    "skipLibCheck": true
   }
 }

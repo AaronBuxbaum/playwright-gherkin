@@ -28,14 +28,94 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@cucumber/gherkin", "npm:26.0.3"],\
+            ["@cucumber/gherkin-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:5.0.1"],\
+            ["@cucumber/message-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:4.0.1"],\
+            ["@cucumber/messages", "npm:21.0.1"],\
             ["@playwright/test", "npm:1.31.2"],\
-            ["cucumber-messages", "npm:8.0.0"],\
-            ["gherkin", "npm:9.0.0"],\
+            ["@types/node", "npm:16.18.14"],\
             ["prettier", "npm:2.8.4"],\
             ["tsup", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:6.6.3"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@cucumber/gherkin", [\
+        ["npm:26.0.3", {\
+          "packageLocation": "./.yarn/cache/@cucumber-gherkin-npm-26.0.3-0adfeb1401-b070739a8b.zip/node_modules/@cucumber/gherkin/",\
+          "packageDependencies": [\
+            ["@cucumber/gherkin", "npm:26.0.3"],\
+            ["@cucumber/messages", "npm:21.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@cucumber/gherkin-streams", [\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/@cucumber-gherkin-streams-npm-5.0.1-a9097ed93e-b8e85b60c0.zip/node_modules/@cucumber/gherkin-streams/",\
+          "packageDependencies": [\
+            ["@cucumber/gherkin-streams", "npm:5.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:5.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@cucumber-gherkin-streams-virtual-dec17b35cd/0/cache/@cucumber-gherkin-streams-npm-5.0.1-a9097ed93e-b8e85b60c0.zip/node_modules/@cucumber/gherkin-streams/",\
+          "packageDependencies": [\
+            ["@cucumber/gherkin-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:5.0.1"],\
+            ["@cucumber/gherkin", "npm:26.0.3"],\
+            ["@cucumber/message-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:4.0.1"],\
+            ["@cucumber/messages", "npm:21.0.1"],\
+            ["@types/cucumber__gherkin", null],\
+            ["@types/cucumber__message-streams", null],\
+            ["@types/cucumber__messages", null],\
+            ["commander", "npm:9.1.0"],\
+            ["source-map-support", "npm:0.5.21"]\
+          ],\
+          "packagePeers": [\
+            "@cucumber/gherkin",\
+            "@cucumber/message-streams",\
+            "@cucumber/messages",\
+            "@types/cucumber__gherkin",\
+            "@types/cucumber__message-streams",\
+            "@types/cucumber__messages"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@cucumber/message-streams", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/@cucumber-message-streams-npm-4.0.1-0c98ff65d5-1ebb05ccf9.zip/node_modules/@cucumber/message-streams/",\
+          "packageDependencies": [\
+            ["@cucumber/message-streams", "npm:4.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:4.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@cucumber-message-streams-virtual-d79b2838a7/0/cache/@cucumber-message-streams-npm-4.0.1-0c98ff65d5-1ebb05ccf9.zip/node_modules/@cucumber/message-streams/",\
+          "packageDependencies": [\
+            ["@cucumber/message-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:4.0.1"],\
+            ["@cucumber/messages", "npm:21.0.1"],\
+            ["@types/cucumber__messages", null]\
+          ],\
+          "packagePeers": [\
+            "@cucumber/messages",\
+            "@types/cucumber__messages"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@cucumber/messages", [\
+        ["npm:21.0.1", {\
+          "packageLocation": "./.yarn/cache/@cucumber-messages-npm-21.0.1-5dd3dcfba8-01849f35bb.zip/node_modules/@cucumber/messages/",\
+          "packageDependencies": [\
+            ["@cucumber/messages", "npm:21.0.1"],\
+            ["@types/uuid", "npm:8.3.4"],\
+            ["class-transformer", "npm:0.5.1"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["uuid", "npm:9.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@esbuild/android-arm", [\
@@ -310,98 +390,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@protobufjs/aspromise", [\
-        ["npm:1.1.2", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-aspromise-npm-1.1.2-71d00b938f-011fe7ef08.zip/node_modules/@protobufjs/aspromise/",\
-          "packageDependencies": [\
-            ["@protobufjs/aspromise", "npm:1.1.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/base64", [\
-        ["npm:1.1.2", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-base64-npm-1.1.2-cd8ca6814a-67173ac34d.zip/node_modules/@protobufjs/base64/",\
-          "packageDependencies": [\
-            ["@protobufjs/base64", "npm:1.1.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/codegen", [\
-        ["npm:2.0.4", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-codegen-npm-2.0.4-36e188bbe6-59240c850b.zip/node_modules/@protobufjs/codegen/",\
-          "packageDependencies": [\
-            ["@protobufjs/codegen", "npm:2.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/eventemitter", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-eventemitter-npm-1.1.0-029cc7d431-0369163a3d.zip/node_modules/@protobufjs/eventemitter/",\
-          "packageDependencies": [\
-            ["@protobufjs/eventemitter", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/fetch", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-fetch-npm-1.1.0-ca857b7df4-3fce7e09eb.zip/node_modules/@protobufjs/fetch/",\
-          "packageDependencies": [\
-            ["@protobufjs/fetch", "npm:1.1.0"],\
-            ["@protobufjs/aspromise", "npm:1.1.2"],\
-            ["@protobufjs/inquire", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/float", [\
-        ["npm:1.0.2", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-float-npm-1.0.2-5678f64d08-5781e12412.zip/node_modules/@protobufjs/float/",\
-          "packageDependencies": [\
-            ["@protobufjs/float", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/inquire", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-inquire-npm-1.1.0-3c7759e9ce-ca06f02eaf.zip/node_modules/@protobufjs/inquire/",\
-          "packageDependencies": [\
-            ["@protobufjs/inquire", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/path", [\
-        ["npm:1.1.2", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-path-npm-1.1.2-641d08de76-856eeb532b.zip/node_modules/@protobufjs/path/",\
-          "packageDependencies": [\
-            ["@protobufjs/path", "npm:1.1.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/pool", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-pool-npm-1.1.0-47a76f96a1-d6a34fbbd2.zip/node_modules/@protobufjs/pool/",\
-          "packageDependencies": [\
-            ["@protobufjs/pool", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@protobufjs/utf8", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@protobufjs-utf8-npm-1.1.0-02c590807c-f9bf3163d1.zip/node_modules/@protobufjs/utf8/",\
-          "packageDependencies": [\
-            ["@protobufjs/utf8", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@tootallnate/once", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
@@ -411,16 +399,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/long", [\
-        ["npm:4.0.2", {\
-          "packageLocation": "./.yarn/cache/@types-long-npm-4.0.2-e7bdc00dd4-d16cde7240.zip/node_modules/@types/long/",\
+      ["@types/node", [\
+        ["npm:16.18.14", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.18.14-5c09f9b896-7865c1c3e7.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/long", "npm:4.0.2"]\
+            ["@types/node", "npm:16.18.14"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/node", [\
+        }],\
         ["npm:18.14.6", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.14.6-7d0665d471-2f88f482ca.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -430,10 +416,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/uuid", [\
-        ["npm:3.4.10", {\
-          "packageLocation": "./.yarn/cache/@types-uuid-npm-3.4.10-5a3279b6e4-9905d559a1.zip/node_modules/@types/uuid/",\
+        ["npm:8.3.4", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-8.3.4-7547f4402c-6f11f3ff70.zip/node_modules/@types/uuid/",\
           "packageDependencies": [\
-            ["@types/uuid", "npm:3.4.10"]\
+            ["@types/uuid", "npm:8.3.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -679,6 +665,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["class-transformer", [\
+        ["npm:0.5.1", {\
+          "packageLocation": "./.yarn/cache/class-transformer-npm-0.5.1-96b5161e6c-f191c8b4cc.zip/node_modules/class-transformer/",\
+          "packageDependencies": [\
+            ["class-transformer", "npm:0.5.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["clean-stack", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip/node_modules/clean-stack/",\
@@ -702,6 +697,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/commander-npm-4.1.1-22a0fe921b-d7b9913ff9.zip/node_modules/commander/",\
           "packageDependencies": [\
             ["commander", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.1.0", {\
+          "packageLocation": "./.yarn/cache/commander-npm-9.1.0-516d19937f-1428319b6b.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:9.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -732,18 +734,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path-key", "npm:3.1.1"],\
             ["shebang-command", "npm:2.0.0"],\
             ["which", "npm:2.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["cucumber-messages", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/cucumber-messages-npm-8.0.0-f24f1b0051-94cd07c7f8.zip/node_modules/cucumber-messages/",\
-          "packageDependencies": [\
-            ["cucumber-messages", "npm:8.0.0"],\
-            ["@types/uuid", "npm:3.4.10"],\
-            ["protobufjs", "npm:6.11.3"],\
-            ["uuid", "npm:3.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -970,18 +960,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/get-stream-npm-6.0.1-83e51a4642-e04ecece32.zip/node_modules/get-stream/",\
           "packageDependencies": [\
             ["get-stream", "npm:6.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["gherkin", [\
-        ["npm:9.0.0", {\
-          "packageLocation": "./.yarn/cache/gherkin-npm-9.0.0-01a7698925-b5b5ea66eb.zip/node_modules/gherkin/",\
-          "packageDependencies": [\
-            ["gherkin", "npm:9.0.0"],\
-            ["commander", "npm:4.1.1"],\
-            ["cucumber-messages", "npm:8.0.0"],\
-            ["source-map-support", "npm:0.5.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1310,15 +1288,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash.sortby-npm-4.7.0-fda8ab950d-db170c9396.zip/node_modules/lodash.sortby/",\
           "packageDependencies": [\
             ["lodash.sortby", "npm:4.7.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["long", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/long-npm-4.0.0-ecd96a31ed-16afbe8f74.zip/node_modules/long/",\
-          "packageDependencies": [\
-            ["long", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1707,9 +1676,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["playwright-gherkin-reporter", "workspace:."],\
+            ["@cucumber/gherkin", "npm:26.0.3"],\
+            ["@cucumber/gherkin-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:5.0.1"],\
+            ["@cucumber/message-streams", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:4.0.1"],\
+            ["@cucumber/messages", "npm:21.0.1"],\
             ["@playwright/test", "npm:1.31.2"],\
-            ["cucumber-messages", "npm:8.0.0"],\
-            ["gherkin", "npm:9.0.0"],\
+            ["@types/node", "npm:16.18.14"],\
             ["prettier", "npm:2.8.4"],\
             ["tsup", "virtual:2b8f5e39e7134407682da61e6d1a5cd2327727e8019d0f0a56e7ca72eff1931be5a28a15fafa7cd05e69d319465988ba35feca06fb8f86dc64118f49ff209d29#npm:6.6.3"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
@@ -1787,28 +1759,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["protobufjs", [\
-        ["npm:6.11.3", {\
-          "packageLocation": "./.yarn/unplugged/protobufjs-npm-6.11.3-566fb31188/node_modules/protobufjs/",\
-          "packageDependencies": [\
-            ["protobufjs", "npm:6.11.3"],\
-            ["@protobufjs/aspromise", "npm:1.1.2"],\
-            ["@protobufjs/base64", "npm:1.1.2"],\
-            ["@protobufjs/codegen", "npm:2.0.4"],\
-            ["@protobufjs/eventemitter", "npm:1.1.0"],\
-            ["@protobufjs/fetch", "npm:1.1.0"],\
-            ["@protobufjs/float", "npm:1.0.2"],\
-            ["@protobufjs/inquire", "npm:1.1.0"],\
-            ["@protobufjs/path", "npm:1.1.2"],\
-            ["@protobufjs/pool", "npm:1.1.0"],\
-            ["@protobufjs/utf8", "npm:1.1.0"],\
-            ["@types/long", "npm:4.0.2"],\
-            ["@types/node", "npm:18.14.6"],\
-            ["long", "npm:4.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["punycode", [\
         ["npm:2.3.0", {\
           "packageLocation": "./.yarn/cache/punycode-npm-2.3.0-df4bdce06b-39f760e09a.zip/node_modules/punycode/",\
@@ -1845,6 +1795,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["readdirp", "npm:3.6.0"],\
             ["picomatch", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["reflect-metadata", [\
+        ["npm:0.1.13", {\
+          "packageLocation": "./.yarn/cache/reflect-metadata-npm-0.1.13-c525998e20-798d379a7b.zip/node_modules/reflect-metadata/",\
+          "packageDependencies": [\
+            ["reflect-metadata", "npm:0.1.13"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2262,10 +2221,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["uuid", [\
-        ["npm:3.4.0", {\
-          "packageLocation": "./.yarn/cache/uuid-npm-3.4.0-4fd8ef88ad-58de2feed6.zip/node_modules/uuid/",\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-9.0.0-46c41e3e43-8dd2c83c43.zip/node_modules/uuid/",\
           "packageDependencies": [\
-            ["uuid", "npm:3.4.0"]\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\

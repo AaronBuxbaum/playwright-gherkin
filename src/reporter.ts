@@ -5,6 +5,7 @@ import {
   TestCase,
   TestResult,
 } from "@playwright/test/reporter";
+import * as fs from "fs";
 import translateFeature, { Feature, GherkinData } from "./translateFeature";
 
 class GherkinReporter implements Reporter {
@@ -47,7 +48,12 @@ class GherkinReporter implements Reporter {
     suites.forEach((suite) => {
       const { location, suites } = suite;
       if (location) {
-        files.add(this.handleTestFilename(location.file));
+        const file = this.handleTestFilename(location.file);
+        if (fs.existsSync(file)) {
+          files.add(file);
+        } else {
+          console.warn(`${location.file} has no associated feature file!`);
+        }
       }
       if (suites) {
         this.findTestFiles(suites, files);
