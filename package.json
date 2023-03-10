@@ -3,13 +3,14 @@
   "sideEffects": false,
   "type": "module",
   "main": "./dist/index.js",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "author": "Aaron Buxbaum (me@aaronbuxbaum.com)",
   "description": "Playwright reporter for BDD",
   "scripts": {
     "build": "tsup src --format esm --clean",
     "typecheck": "tsc",
-    "prepack": "yarn check-formatting && yarn build",
+    "validate": "yarn typecheck && yarn check-formatting",
+    "prepack": "yarn validate && yarn build",
     "format": "prettier --cache --write .",
     "check-formatting": "prettier --cache --check .",
     "publish": "yarn npm publish"

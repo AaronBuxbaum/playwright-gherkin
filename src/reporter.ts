@@ -18,6 +18,7 @@ class GherkinReporter implements Reporter {
 
   onTestEnd(test: TestCase, result: TestResult) {
     const feature = this.getFeature(test);
+    if (!feature) return;
     const scenario = this.getScenario(test, feature);
     if (scenario.tags.some((tag) => tag.name === "skip")) return;
 
@@ -53,6 +54,7 @@ class GherkinReporter implements Reporter {
           files.add(file);
         } else {
           console.warn(`${location.file} has no associated feature file!`);
+          return;
         }
       }
       if (suites) {
@@ -69,9 +71,8 @@ class GherkinReporter implements Reporter {
   getFeature(test: TestCase) {
     const filename = this.handleTestFilename(test.location.file);
     const feature = this.features[filename];
-    if (!feature) {
-      throw new Error(`Can't find feature file: ${filename}`);
-    }
+    if (!feature) return;
+
     this.assert(
       feature.document.feature?.name,
       test.parent.title,
