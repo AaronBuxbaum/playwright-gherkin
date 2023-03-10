@@ -1,5 +1,6 @@
 import {
   FullConfig,
+  FullResult,
   Reporter,
   Suite,
   TestCase,
@@ -32,7 +33,9 @@ class GherkinReporter implements Reporter {
     scenario.matchers = matchers;
   }
 
-  onEnd() {
+  onEnd(result: FullResult) {
+    if (result.status !== "passed") return;
+
     Object.values(this.features).forEach((feature) => {
       this.checkFeature(feature);
     });
